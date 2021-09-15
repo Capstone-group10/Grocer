@@ -12,7 +12,7 @@ app.use(cors);
 
 
 const mongooseDboption = {
-    useNewUrlParse = true,
+    useNewUrlParse : true,
     useUnifiedTopology : true
 
 }
