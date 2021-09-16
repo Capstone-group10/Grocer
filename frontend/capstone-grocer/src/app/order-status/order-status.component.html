@@ -1,0 +1,31 @@
+<h3>{{ name}}</h3>
+
+ <div class="container">
+ <span *ngFor="let item of counts;let i = index">
+   <span class="circle-desc" [class.circle-desc-active]="orderStatus == item">{{ item }}</span>
+   <span class="circles" [class.active]="orderStatus == item"></span>
+   <span class="bar" *ngIf="(i != counts.length-1)"></span>
+ </span>
+ </div>
+<br>
+<br>
+<br>
+<h2>Order History</h2>
+ <div>
+   <table border="1">
+     <tr>
+       <th>ID</th>
+       <th>Total</th>
+       <th>Products</th>
+       <th>Date</th>
+       <th>Status</th>
+     </tr>
+     <tr *ngFor="let order of orders">
+       <td>{{order._id}}</td>
+       <td>{{order.total}}</td>
+       <td>{{order.products}}</td>
+       <td>{{order.date}}</td>
+       <td>{{order.status}}</td>
+     </tr>
+   </table>
+ </div>
